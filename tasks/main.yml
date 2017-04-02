@@ -1,4 +1,4 @@
 ---
 # tasks file for /usr/local/google/home/friasc/apigee-workspace/apigee-opdk-role-workspace/apigee-opdk-setup-postgres-db-upgrade
-- name: PGMaster DB upgrade
+- name: Postgres master db_upgrade
   shell: '{{ apigee_service }} apigee-postgresql db_upgrade'
