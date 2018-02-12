@@ -2,7 +2,7 @@
 # tasks file for /usr/local/google/home/friasc/apigee-workspace/apigee-opdk-role-workspace/apigee-opdk-setup-postgres-db-upgrade
 - name: Postgres master db_upgrade
   become_user: apigee
-  shell: '{{ apigee_service }} apigee-postgresql db_upgrade'
+  shell: '/opt/apigee/apigee-service/bin/apigee-service apigee-postgresql db_upgrade'
   environment:
     http_proxy: "{{ http_proxy }}"
     https_proxy: "{{ https_proxy }}"
