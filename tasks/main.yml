@@ -9,3 +9,6 @@
     no_proxy: "{{ no_proxy }}"
     PORT_TIMEOUT: '{{ port_timeout | default(60) }}'
     UP_TIMEOUT: '{{ up_timeout | default(60) }}'
+  register: upgrade
+  failed_when:
+    - "'All OK' not in upgrade.stdout"
