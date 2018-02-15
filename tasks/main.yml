@@ -13,4 +13,5 @@
   failed_when:
     - "'All OK' not in upgrade.stdout"
   when:
-  - upgrade_from_opdk_version | version_compare('4.17.01', '<')
+  - upgrade_from_opdk_version | version_compare('4.17.01', '<') and opdk_version | version_compare('4.17.09', '==')
+  - opdk_version | version_compare('4.18.01', '==')
