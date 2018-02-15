@@ -12,3 +12,5 @@
   register: upgrade
   failed_when:
     - "'All OK' not in upgrade.stdout"
+  when:
+  - upgrade_from_opdk_version | version_compare('4.17.01', '<')
