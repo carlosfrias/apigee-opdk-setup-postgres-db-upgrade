@@ -12,4 +12,6 @@
   register: upgrade
   failed_when:
     - "'All OK' not in upgrade.stdout"
+  when: opdk_version | version('4.19.01', '<')
+
 
